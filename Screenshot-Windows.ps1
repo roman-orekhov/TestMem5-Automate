@@ -331,6 +331,7 @@ if ($log.Count) {
 if ($last_cycle) {
     Remove-Item -LiteralPath $sizefn -ErrorAction Ignore
     Stop-Process -Name "HWiNFO*"
+    Set-Content -LiteralPath "$PSScriptRoot\$basename-full.log" $log
 }
 
 #"\"HWiNFO*Sensor Status\""
